@@ -27,7 +27,7 @@ int main(int argc,char* argv[]){
             value_d = A[posd];
             fs>>tmp;
             if( value_d>=tmp && value_d>=A[posd-1] && value_d>=A[posd+1] && value_d>=A[pos] ){
-                ind.push(i-1); ind.push(j);
+                ind.push(i); ind.push(j+1);
                 count++;
             }
             A[pos] = tmp;
@@ -39,7 +39,7 @@ int main(int argc,char* argv[]){
         posd = 1+(n+1)*((i+1)%2)+j;
         value_d = A[posd];
         if( value_d>=A[pos] && value_d>=A[posd-1] && value_d>=A[posd+1] ) {
-            ind.push(i-1); ind.push(j);
+            ind.push(i); ind.push(j+1);
             count++;
         }
     }
