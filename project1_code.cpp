@@ -7,6 +7,7 @@ int main(int argc,char* argv[]){
     int i,j,n,m,pos,posd,tmp,count=0,value_d,*A;
     fstream fs;
     string str(argv[1]); 
+    str = "./" + str;
 
     queue<int> ind;
 
